@@ -7,7 +7,7 @@ def remove_abv_words(text):
 
 def text_message(update, context):
     text = update.message.text
-    filtered_text = remove_words(text)
+    filtered_text = remove_abv_words(text)
     context.bot.send_message(chat_id=update.effective_chat.id, text=filtered_text)
 
 def main():
